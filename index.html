@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap" rel="stylesheet"> 
+   
+    
+    <title>Post-it</title>
+</head>
+<body>
+    
+    <header class="menu-deslizante">
+        <div class="area-digitavel">
+            
+            <textarea name="" data-titulo="nova-titulo" id="mensagen-titlo" cols="20" rows="1" class="input-padrao" placeholder="Título"></textarea>
+            
+            <textarea name="" data-mensagem="nova" id="mensagen" cols="20" rows="8" class="input-padrao" placeholder="Seu lembrete aqui..."></textarea>
+
+            <div class="botoes-deslizante">
+                <button class="botao botao-salvar botao-deslizante" id="botaoSalvar">Salvar</button>
+                <button class="botao botao-cancelar botao-cancelar-verde  botao-deslizante">Cancelar</button>
+            </div>
+        </div>
+        
+    </header>
+
+
+
+
+    <nav class="nav-deslizante">
+        <div class="area-digitavel">
+            <textarea name="" data-tituloEditado="" id="titulo-editado" cols="20" rows="1" class="input-edicao" placeholder="Título"></textarea>
+            
+            <textarea name="" data-mensagem="" id="mensagen-editada" cols="20" rows="8" class="input-edicao"></textarea>
+            <div class="botoes-deslizante">
+                <button class="botao botao-editar nav__botao-editar" >Editar</button>
+                
+            </div>
+        </div>
+        
+    </nav>
+
+    <div class="div-busca">
+        <input type="text" placeholder="Busca..." class="filtro">
+    </div>
+
+    <button class="botao-adicionar botao-deslizante"></button>
+
+    <section class="container-cards" id="data-list">
+
+<!--         <div class="post-it">
+            <div>
+                <div class="xis botao-cancelar" data-id="18">X</div>
+                <h4>Compras</h4>
+                <p class="texto" data-id="18">2 bolacha 4 arroz</p>
+            </div>
+        </div>
+     -->
+    </section>
+
+    <footer class="rodape">
+        <a href="https://www.facebook.com/darlan.aguiar.165">
+            <p> Dr.Gelo &#129482; Software &#x2122; </p>
+        </a>
+    </footer>
+
+    <script src="index2.js"></script>
+    <script src="bootstrap.bundle.min.js"></script>
+    
+</body>
+</html>
