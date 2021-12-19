@@ -64,14 +64,14 @@ const abrirMenuEditar = (click) =>{
 
     let tituloEdicao = document.getElementById("titulo-editado");
     tituloEdicao.value = titulo
-    let campoDeEdiçao = document.getElementById("mensagen-editada");
+    let campoDeEdiçao = document.getElementById("mensagem-editada");
     campoDeEdiçao.value = texto
 }
 
 function salvarEdicao () {
 
     const titulo = document.getElementById("titulo-editado").value;
-    const lembrete = document.getElementById("mensagen-editada").value;
+    const lembrete = document.getElementById("mensagem-editada").value;
 
     let localParaAdicionar = bancoDeDados.transaction([nomeDaLista], "readwrite");
 
@@ -224,7 +224,7 @@ function pegarDados(){
         campoTitulo.value = ""
 
     }else{
-        alert("Esqueceu de digitar o seu lembrete")
+        
         campoInformacoes.value = ""
         campoTitulo.value = ""
         
@@ -272,14 +272,21 @@ let campoDigitavelBusca = document.querySelector(".filtro");
 
 // Eventos
 
-document.querySelector(".nav__botao-editar").addEventListener("click", ()=>{
-   salvarEdicao()
+/* document.querySelector(".nav__botao-editar").addEventListener("click", ()=>{
    
-})
+   
+}) */
 
 document.querySelector(".botao-cancelar").addEventListener("click" ,()=>{
     var campoInformacoes = document.querySelector("[data-mensagem]");
-    campoInformacoes.value = ""
+    campoInformacoes.value = "";
+
+    const areaDeAviso = document.querySelector(".aviso")
+        .classList.remove("visualiza-aviso");
+    
+
+    campoInformacoes.classList.remove("borda-vermelha");
+
     var campoTitulo = document.querySelector("[data-titulo]");
     campoTitulo.value = ""
 
@@ -288,9 +295,25 @@ document.querySelector(".botao-cancelar").addEventListener("click" ,()=>{
 });
 
 document.querySelector(".botao-salvar").addEventListener("click", ()=>{
-    document.querySelector('.menu-deslizante').classList.toggle('menu-deslizante--ativo')
-    pegarDados()
-    document.querySelector('.botao-adicionar').classList.toggle('apaga-botao');
+    const temMensagem = document.getElementById("mensagem");
+    const areaDeAviso = document.querySelector(".aviso");
+    console.log(temMensagem)
+    if(temMensagem.value.length > 0){
+
+        document.querySelector('.menu-deslizante').classList.toggle('menu-deslizante--ativo')
+
+        document.querySelector('.botao-adicionar').classList.toggle('apaga-botao');
+
+        temMensagem.classList.remove("borda-vermelha");
+        areaDeAviso.classList.remove("visualiza-aviso");
+
+        pegarDados()
+    }else{
+        temMensagem.classList.add("borda-vermelha");
+        areaDeAviso.classList.add("visualiza-aviso");
+    }
+
+
 });
 
 
@@ -303,9 +326,24 @@ document.querySelector('.botao-adicionar').addEventListener('click', () => {
 
 
 document.querySelector(".botao-editar").addEventListener("click", ()=>{
+
+    const temMensagem = document.getElementById("mensagem-editada");
+    const areaDeAvisoEditar = document.querySelector(".aviso-editar");
+
+    if(temMensagem.value.length > 0){
+
+        document.querySelector('.nav-deslizante').classList.toggle('nav-deslizante--ativo');
+        document.querySelector('.botao-adicionar').classList.toggle('apaga-botao');
+
+        temMensagem.classList.remove("borda-vermelha");
+        areaDeAvisoEditar.classList.remove("visualiza-aviso");
+
+        salvarEdicao()
+    }else{
+        temMensagem.classList.add("borda-vermelha");
+        areaDeAvisoEditar.classList.add("visualiza-aviso");
+    }
     
-    document.querySelector('.nav-deslizante').classList.toggle('nav-deslizante--ativo');
-    document.querySelector('.botao-adicionar').classList.toggle('apaga-botao');
 })
 
 

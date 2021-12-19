@@ -21,7 +21,8 @@
             
             <textarea name="" data-titulo="nova-titulo" id="mensagen-titlo" cols="20" rows="1" class="input-padrao" placeholder="Título"></textarea>
             
-            <textarea name="" data-mensagem="nova" id="mensagen" cols="20" rows="8" class="input-padrao" placeholder="Seu lembrete aqui..."></textarea>
+            <textarea name="" data-mensagem="nova" id="mensagem" cols="20" rows="8" class="input-padrao " placeholder="Seu lembrete aqui..."></textarea>
+            <p class="aviso">*Este campo não pode ser vazio</p>
 
             <div class="botoes-deslizante">
                 <button class="botao botao-salvar botao-deslizante" id="botaoSalvar">Salvar</button>
@@ -38,7 +39,10 @@
         <div class="area-digitavel">
             <textarea name="" data-tituloEditado="" id="titulo-editado" cols="20" rows="1" class="input-edicao" placeholder="Título"></textarea>
             
-            <textarea name="" data-mensagem="" id="mensagen-editada" cols="20" rows="8" class="input-edicao"></textarea>
+            <textarea name="" data-mensagem="" id="mensagem-editada" cols="20" rows="8" class="input-edicao"></textarea>
+
+            <p class="aviso aviso-editar">*Este campo não pode ser vazio</p>
+
             <div class="botoes-deslizante">
                 <button class="botao botao-editar nav__botao-editar" >Editar</button>
                 
@@ -72,7 +76,7 @@
     </footer>
 
     <script src="index2.js"></script>
-    <script src="bootstrap.bundle.min.js"></script>
+    
     
 </body>
 </html>

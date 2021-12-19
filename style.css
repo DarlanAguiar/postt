@@ -26,6 +26,7 @@ body{
 }
 
 
+
 .menu-deslizante{
     padding: 20px 0;
     width: 78vw;
@@ -60,6 +61,23 @@ textarea{
     border-bottom-left-radius: 10px;
     border-top-right-radius: 10px;
     
+    
+}
+
+.borda-vermelha{
+    box-shadow: 0 0 6px red;
+}
+
+.aviso{
+    font-size: .7em;
+    padding-left: 4px;
+    color: red;
+    text-shadow: 0 0 .5px white;
+    display: none;
+}
+
+.visualiza-aviso{
+    display: block;
 }
 
 .botoes-deslizante{
