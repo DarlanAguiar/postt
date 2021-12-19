@@ -129,6 +129,7 @@ textarea{
     top: 0;
    
     transition: .5s;
+        
 }
 
 .div-busca{
@@ -139,11 +140,13 @@ textarea{
     /* display: flex;
     justify-content: end; */
     transition: .5s;
+    
 }
 
 .busca-ativa{
     left: 0;
 }
+
 
 .filtro{
     font-family: 'Caveat', cursive;;

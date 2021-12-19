@@ -361,3 +361,21 @@ criaBancoDeDados();
 
 
 
+class Icones {
+    constructor() {
+        this.listaIcones = document.querySelector("#icone")
+    }
+
+    animaIcone() {
+        TweenMax.to(this.listaIcones, 1, {transform: 'scale(1.14)', repeat: -1,  yoyo: true})
+        
+    }
+
+}
+window.onload = () => {
+  
+    const icones = new Icones();
+
+    icones.animaIcone();
+
+}
