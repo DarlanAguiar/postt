@@ -346,6 +346,15 @@ document.querySelector(".botao-editar").addEventListener("click", ()=>{
     
 })
 
+document.querySelector(".lupa").addEventListener("click", () => {
+    const campoBuscar = document.querySelector(".div-busca").classList.toggle("busca-ativa")
+})
+document.querySelector(".filtro").addEventListener("blur", ()=> {
+    const campoBuscar = document.querySelector(".div-busca");
+    campoBuscar.classList.remove("busca-ativa")
+})
+
+
 
 criaBancoDeDados();
 
